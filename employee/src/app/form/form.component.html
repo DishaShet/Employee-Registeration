@@ -1,0 +1,54 @@
+
+     <div class="container"> 
+        
+            <form class="form" [formGroup]="empForm" (ngSubmit)="OnSubmit()">
+                    <h1>Employee Registeration Form</h1>
+                    <div formGroupName="userName" class="form-group">
+                        <label >UserName</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" formControlName="firstName"  placeholder="FirstName"  >
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" formControlName="lastName" placeholder="LastName">
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="form-group">                           
+                             <div class="row">
+                                    <div class="col-md-3">
+                                            <label class="form-check-label">Gender    </label>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="radio" class="form-check-input" formControlName="gender" value="Male" >Male 
+            
+                                    </div>
+                                    <div class="col-md-3">
+                                            <input type="radio"  class="form-check-input" formControlName="gender" value="Female" >Female
+                                    </div>
+                                </div> 
+                           
+                    </div>
+                    <div class="form-group">
+                        <label for=Age>Age</label>
+                        <input type="number" class="form-control" formControlName="age" placeholder="Age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for=EmailId>EmailId</label>
+                        <input type="email" class="form-control" formControlName="emailId" placeholder="example: abc@gmail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for=Hobbies>Hobbies</label>
+                        <input type="text" class="form-control" formControlName="hobbies" placeholder=" List your Hobbies" required>
+                    </div>
+                    <div class="btn-icon">
+                        <button class="btn btn-primary " type="submit" [disabled]="!empForm.valid">Sumbit   </button>
+                           <button class="btn btn-primary " type="reset" >Reset</button>
+                   </div>
+                </form>                
+    </div>
+
+       
+       
+
+ 

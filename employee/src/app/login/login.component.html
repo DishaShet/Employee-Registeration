@@ -1,0 +1,32 @@
+
+<!-- <div class="container-fluid">
+    <form [formGroup]="loginForm" (ngSubmit)="OnLogin()">
+            <div class="form-group">
+                    <label for="userId">User Id</label>
+                    <input type="text" class="form-control" formControlName="userId">
+                </div>
+                <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" formControlName="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  
+</div> -->
+
+ <!-- Two way data binding  -->
+<div class="container-fluid">
+   <div class="container"> 
+    <form (ngSubmit)="OnLogin()">
+            <div class="form-group">
+                    <label for="userId">User Id</label>
+                    <input type="text" class="form-control" [(ngModel)]="employeeData.userId" name="userId">
+                </div>
+                <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" [(ngModel)]="employeeData.password" name="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+   </div>
+</div>
